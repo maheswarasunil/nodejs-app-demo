@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/my-app
+
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+
+hooks:
+  ApplicationStart:
+    - location: bin/app-start 
+      timeout: 60
+      runas: root
+
+  ValidateService:
+    - location: bin/check-app
+      timeout: 60
+      runas: root

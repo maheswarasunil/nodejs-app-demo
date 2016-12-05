@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Start nodejs app
+
+ps ax | grep nodejs
+
+exit 0

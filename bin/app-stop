@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Start nodejs app
+
+/home/ubuntu/my-app/bin/nodejs-app stop

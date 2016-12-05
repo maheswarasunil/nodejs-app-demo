@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Start nodejs app
+
+
+#/home/ubuntu/my-app/bin/nodejs-app restart
+
+cd /home/ubuntu/my-app/
+if [ -f node.pid ]; then 
+   kill -9 `cat node.pid` 
+fi
+/usr/bin/nodejs /home/ubuntu/my-app/app.js  > /dev/null 2> /dev/null < /dev/null &
+echo $! > node.pid
+
+echo "Started program"
+exit 0
