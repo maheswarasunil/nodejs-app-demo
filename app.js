@@ -10,7 +10,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.all('*', function(req, res) {
-  res.render('index', {msg: 'Welcome to the DEV branch environment Node.js! #DEV branch build #1'})
+  res.render('index', {msg: 'Welcome to the projectx branch environment Node.js! #projectx branch build #1'})
 })
 
 // http.createServer(app).listen(app.get('port'), function(){
